@@ -28,3 +28,12 @@ ggplot(football_data, aes(x = Age)) +
        x = "Age (Years)",
        y = "Frequency") +
   theme_minimal()
+
+# Scatter Plot for Goals Per Match vs. Age
+ggplot(football_data, aes(x = Age, y = GoalsPerMatch)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Goals Per Match vs. Age",
+       x = "Age (Years)",
+       y = "Goals Per Match") +
+  theme_minimal()
