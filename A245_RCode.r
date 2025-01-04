@@ -37,3 +37,7 @@ ggplot(football_data, aes(x = Age, y = GoalsPerMatch)) +
        x = "Age (Years)",
        y = "Goals Per Match") +
   theme_minimal()
+
+# Pearson's correlation coefficient
+correlation_test <- cor.test(football_data$Age, football_data$GoalsPerMatch, method = "pearson")
+print(correlation_test)
